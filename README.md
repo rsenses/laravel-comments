@@ -14,7 +14,7 @@ This package provides an incredibly simple comment system for your Laravel appli
 You can install the package via Composer:
 
 ```bash
-composer require ryangjchandler/laravel-comments
+composer require rsenses/laravel-comments
 ```
 
 The package automatically registers migrations so there's no need to publish anything, just run them.
@@ -94,6 +94,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
+- [Rubén Silva](https://github.com/rsenses)
 - [Ryan Chandler](https://github.com/ryangjchandler)
 - [All Contributors](../../contributors)
 
