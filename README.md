@@ -34,7 +34,7 @@ This is the contents of the published config file:
 ```php
 return [
 
-    'model' => \RyanChandler\Comments\Models\Comment::class,
+    'model' => \Rsenses\Comments\Models\Comment::class,
 
     'user' => \App\Models\User::class,
 
@@ -43,10 +43,10 @@ return [
 
 ## Usage
 
-Start by using the `RyanChandler\Comments\Concerns\HasComments` trait on your model.
+Start by using the `Rsenses\Comments\Concerns\HasComments` trait on your model.
 
 ```php
-use RyanChandler\Comments\Concerns\HasComments;
+use Rsenses\Comments\Concerns\HasComments;
 
 class Post extends Model
 {
