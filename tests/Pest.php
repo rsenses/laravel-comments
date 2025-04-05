@@ -1,16 +1,7 @@
 <?php
 
-use Orchestra\Testbench\Factories\UserFactory;
+declare(strict_types=1);
 
-use function Pest\Laravel\actingAs;
-
-use RyanChandler\Comments\Tests\TestCase;
+use Rsenses\Comments\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);
-
-function login()
-{
-    $user = UserFactory::new()->create();
-
-    actingAs($user);
-}

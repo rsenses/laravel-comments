@@ -1,10 +1,12 @@
 <?php
 
-namespace RyanChandler\Comments\Tests;
+declare(strict_types=1);
+
+namespace Rsenses\Comments\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use RyanChandler\Comments\CommentsServiceProvider;
+use Rsenses\Comments\CommentsServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,8 +15,16 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'RyanChandler\\Comments\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName): string => 'Rsenses\\Comments\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
+    }
+
+    public function getEnvironmentSetUp($app): void
+    {
+        config()->set('database.default', 'testing');
+
+        $migration = require __DIR__.'/../database/migrations/create_comments_table.php';
+        $migration->up();
     }
 
     protected function getPackageProviders($app)
@@ -22,14 +32,6 @@ class TestCase extends Orchestra
         return [
             CommentsServiceProvider::class,
         ];
-    }
-
-    public function getEnvironmentSetUp($app)
-    {
-        config()->set('database.default', 'testing');
-
-        $migration = require __DIR__ . '/../database/migrations/create_comments_table.php';
-        $migration->up();
     }
 
     protected function defineDatabaseMigrations()
