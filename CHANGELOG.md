@@ -2,10 +2,15 @@
 
 All notable changes to `laravel-comments` will be documented in this file.
 
+## v1.1.0 - 2024-04-05
+
+- Support for Laravel 12.x
+- Updated test and external development tools
+
 ## v1.0.0 - 2024-03-12
 
-* Support for Laravel 11.x
-* Drop support for Laravel 9.x and 10.x, as well as PHP 8.1.
+- Support for Laravel 11.x
+- Drop support for Laravel 9.x and 10.x, as well as PHP 8.1.
 
 ## v0.2.0 - 2023-03-24
 
