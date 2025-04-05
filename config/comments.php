@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 return [
 
-    'model' => \RyanChandler\Comments\Models\Comment::class,
+    'model' => Rsenses\Comments\Models\Comment::class,
 
     /** @phpstan-ignore-next-line */
-    'user' => \App\Models\User::class,
+    'user' => App\Models\User::class,
 
 ];

@@ -1,10 +1,15 @@
 <?php
 
-namespace RyanChandler\Comments\Database\Factories;
+declare(strict_types=1);
+
+namespace Rsenses\Comments\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use RyanChandler\Comments\Models\Comment;
+use Rsenses\Comments\Models\Comment;
 
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\Rsenses\Comments\Models\Comment>
+ */
 class CommentFactory extends Factory
 {
     protected $model = Comment::class;
@@ -12,7 +17,7 @@ class CommentFactory extends Factory
     public function definition()
     {
         return [
-            'content' => $this->faker->words(rand(3, 10), asText: true),
+            'content' => fake()->words(rand(3, 10), asText: true),
         ];
     }
 }

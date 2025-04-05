@@ -1,6 +1,8 @@
 <?php
 
-namespace RyanChandler\Comments;
+declare(strict_types=1);
+
+namespace Rsenses\Comments;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -14,10 +16,10 @@ class CommentsServiceProvider extends PackageServiceProvider
             ->hasConfigFile();
     }
 
-    public function packageBooted()
+    public function packageBooted(): void
     {
         $this->loadMigrationsFrom([
-            __DIR__ . '/../database/migrations',
+            __DIR__.'/../database/migrations',
         ]);
     }
 }
