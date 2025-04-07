@@ -1,85 +1,85 @@
 {
-    "name": "rsenses/laravel-comments",
-    "description": "A dead-simple comments package for Laravel.",
-    "keywords": [
-        "ryangjchandler",
-        "rsenses",
-        "laravel",
-        "laravel-comments"
-    ],
-    "homepage": "https://github.com/rsenses/laravel-comments",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Rubén Silva",
-            "email": "me@rsilva.es",
-            "role": "Developer"
-        },
-        {
-            "name": "Ryan Chandler",
-            "email": "support@ryangjchandler.co.uk",
-            "role": "Developer"
-        }
-    ],
-    "require": {
-        "php": "^8.2",
-        "illuminate/database": "^12.0",
-        "spatie/laravel-package-tools": "^1.92"
+  "name": "rsenses/laravel-comments",
+  "description": "A dead-simple comments package for Laravel.",
+  "keywords": [
+    "ryangjchandler",
+    "rsenses",
+    "laravel",
+    "laravel-comments"
+  ],
+  "homepage": "https://github.com/rsenses/laravel-comments",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Rubén Silva",
+      "email": "me@rsilva.es",
+      "role": "Developer"
     },
-    "require-dev": {
-        "nunomaduro/collision": "^8.1",
-        "laravel/pint": "^1.16",
-        "orchestra/testbench": "^10.0",
-        "driftingly/rector-laravel": "^2.0",
-        "larastan/larastan": "^3.0",
-        "pestphp/pest": "^3.7",
-        "pestphp/pest-plugin-type-coverage": "^3.2"
-    },
-    "autoload": {
-        "psr-4": {
-            "Rsenses\\Comments\\": "src",
-            "Rsenses\\Comments\\Database\\Factories\\": "database/factories"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Rsenses\\Comments\\Tests\\": "tests"
-        }
-    },
-    "scripts": {
-        "test:todo": "./vendor/bin/pest --todos",
-        "test:unit": "./vendor/bin/pest --colors=always --coverage --compact --min=93",
-        "lint": "./vendor/bin/pint",
-        "refactor": "./vendor/bin/rector",
-        "test:lint": "./vendor/bin/pint --test",
-        "test:type-coverage": "./vendor/bin/pest --type-coverage --compact --exact=100",
-        "test:refactor": "rector --dry-run",
-        "stan": "./vendor/bin/phpstan analyse --ansi",
-        "test": [
-            "@test:refactor",
-            "@test:lint",
-            "@stan",
-            "@test:type-coverage",
-            "@test:unit"
-        ]
-    },
-    "config": {
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true,
-            "phpstan/extension-installer": true
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Rsenses\\Comments\\CommentsServiceProvider"
-            ],
-            "aliases": {
-                "Comments": "Rsenses\\Comments\\Facades\\Comments"
-            }
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    {
+      "name": "Ryan Chandler",
+      "email": "support@ryangjchandler.co.uk",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "illuminate/database": "^12.0",
+    "spatie/laravel-package-tools": "^1.92"
+  },
+  "require-dev": {
+    "nunomaduro/collision": "^8.1",
+    "laravel/pint": "^1.16",
+    "orchestra/testbench": "^10.0",
+    "driftingly/rector-laravel": "^2.0",
+    "larastan/larastan": "^3.0",
+    "pestphp/pest": "^3.7",
+    "pestphp/pest-plugin-type-coverage": "^3.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Rsenses\\Comments\\": "src",
+      "Rsenses\\Comments\\Database\\Factories\\": "database/factories"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Rsenses\\Comments\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test:todo": "./vendor/bin/pest --todos",
+    "test:unit": "./vendor/bin/pest --colors=always --coverage --compact --min=93",
+    "lint": "./vendor/bin/pint",
+    "refactor": "./vendor/bin/rector",
+    "test:lint": "./vendor/bin/pint --test",
+    "test:type-coverage": "./vendor/bin/pest --type-coverage --compact --exact=100",
+    "test:refactor": "rector --dry-run",
+    "stan": "./vendor/bin/phpstan analyse --ansi",
+    "test": [
+      "@test:refactor",
+      "@test:lint",
+      "@stan",
+      "@test:type-coverage",
+      "@test:unit"
+    ]
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true,
+      "phpstan/extension-installer": true
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Rsenses\\Comments\\CommentsServiceProvider"
+      ],
+      "aliases": {
+        "Comments": "Rsenses\\Comments\\Facades\\Comments"
+      }
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
 }
